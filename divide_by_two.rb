@@ -1,0 +1,1 @@
+#divide every number in an array

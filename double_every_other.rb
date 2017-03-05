@@ -1,0 +1,1 @@
+#double every other array in an array of numbers
