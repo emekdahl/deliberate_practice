@@ -30,10 +30,6 @@ p new_numbers
 #Explanation in English: For the array containing the sequence of numbers 1 -5, select the numbers that are even
 p [1,2,3,4,5].select { |num|  num.even?  }   #=> [2, 4]
 
-# Try to break it - .select requires a block, which is the technical name for the part AFTER the the part in pipes, in this case |num|
-#if you don't put in a block, then it returns an empty array
-p [1,2,3,4,5].select { |num| } 
-
 #Again, if we didn't have .select, we'd have to do something like this to answer the problem above:
 
 even_numbers = []
@@ -50,3 +46,7 @@ end
 p even_numbers
 
 #three cheers for .select! 
+
+# Try to break it - .select requires a block, which is the technical name for the part AFTER the the part in pipes, in this case |num|
+#if you don't put in a block, then it returns an empty array
+p [1,2,3,4,5].select { |num| } 
