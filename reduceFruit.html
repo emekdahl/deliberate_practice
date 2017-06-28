@@ -1,0 +1,21 @@
+<html>
+  <script>
+    var fruits = [
+      {name: "apple", color: "red"},
+      {name: "banana", color: "yellow"},
+      {name: "grape", color: "purple"}
+    ];
+
+    // var reducedFruits = fruits.reduce(function(total,fruit,index) {
+    //   fruit[name] = fruit
+    //   console.log(fruit);
+    // //   return fruit;
+    //      });
+    const reducedFruits = fruits.reduce(function(fruit) {
+      var stuff =  {fruit["name"]: fruit["color"]};
+      return stuff;
+    });
+    
+    console.log(reducedFruits);
+  </script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+  <script>
+    
+    function sumsToX(arr,x) {
+      var result = [];
+      function sumsTo(arr) {
+        for (var i = 0; i < arr.length; i += 2) {
+          var a = arr[i];
+          var b = arr[i + 1];
+
+          if (a + b === x) {
+            console.log(a,b);
+          }
+        }
+      } 
+      var filtered = arr.filter(sumsTo);
+      console.log(filtered);
+      
+    }
+    sumsToX([4, -2, 1, 1], 2);
+
+    
+  </script>
+</html>
+

@@ -1,0 +1,16 @@
+<html>
+  <script type="text/javascript">
+    function mutation(str1, str2) {
+      var arr1 = str1.split("");
+      var arr2 = str2.split("");
+
+      //
+      var newArray = arr1.filter(arr2);
+      return newArray;
+    }
+
+    console.log(mutation("burly", "ruby"));    // true
+    console.log(mutation("burly", "python"));  // false
+  </script>
+</html>
+

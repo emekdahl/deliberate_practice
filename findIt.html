@@ -1,0 +1,18 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Find It</title>
+</head>
+<body>
+  <script>
+    function findIt(array,target) {
+      for (var position = 0; position < array.length; position++) {
+        if (array[position] === target) {
+          console.log(position);
+        }
+      }
+    }
+    findIt([1,2,3],2);
+  </script>
+</body>
+</html>

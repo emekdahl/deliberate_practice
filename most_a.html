@@ -1,0 +1,19 @@
+<html>
+<script>
+function findMostAs(array) {
+  if (array.length === 0) {
+    return null;
+  }
+  var a = array;
+  var b = [];
+
+  for (var i = 0; i < a.length; i++) {
+    b.push((a[i].match(/a/g) || []).length);
+  }
+
+  var j = b.indexOf(Math.max(...b));
+  return a[j];
+}
+console.log(findMostAs(["alphabet", "aardvark", "anarchy"]));
+  </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <script>
+    function uniq(arr) {
+      var len = arr.length,
+        result = [];
+        for (var x = 0; x < len; x++) {
+          if (arr.indexOf(arr[x]) === arr.lastIndexOf(arr[x])) {
+            result.push(arr[x]);
+          }
+        }
+      return result;
+    }
+
+    console.log(uniq([1,1,2,2,3,4,4,5,5,7]));
+  </script>
+</html>
+

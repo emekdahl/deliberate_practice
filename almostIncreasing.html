@@ -1,0 +1,52 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function almostIncreasingSequence(sequence) {
+      var greaterCounter = 0;
+      var lessCounter = 0;
+      var highestValue = 0;
+      for (var i = 0; i < sequence.length - 1;i++) {
+        
+        if (sequence[i + 1] > highestValue) {
+          highestValue = sequence[i + 1];
+        }
+        if (sequence[i] < sequence[i + 1] && sequence[i] < highestValue) {
+          greaterCounter =+ 1;
+          
+        } else {
+          lessCounter += 1;
+        }
+      }
+      if (lessCounter <= 1) {
+        return true;
+      } else {
+
+        return false;
+      }
+    }
+
+    almostIncreasingSequence([1, 3, 2, 1]);
+  </script>
+</body>
+</html>
+
+<!-- var greaterCounter = 0;
+      var lessCounter = 0;
+      for (var i = 0; i < sequence.length - 1;i++) {
+        if (sequence[i] < sequence[i + 1]) {
+          greaterCounter += 1;
+        } else {
+          lessCounter += 1;
+        }
+      }
+      if (lessCounter <= 1) {
+        return true;
+      } else {
+
+        return false;
+      }
+    } -->
