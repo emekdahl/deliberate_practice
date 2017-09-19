@@ -1,10 +1,10 @@
 function solution(str, ending) {
-  pop_len = -ending.length;
-  //console.log('The pop length is ', pop_len);
-  str_seg = str.slice(pop_len);
-  //console.log('The string segment is ', str_seg);
+  var popLen = -ending.length;
+  //console.log('The pop length is ', popLen);
+  var strSeg = str.slice(popLen);
+  //console.log('The string segment is ', strSeg);
   
-  if(str_seg === ending){
+  if (strSeg === ending) {
     return true;
   } else {
     return false;
