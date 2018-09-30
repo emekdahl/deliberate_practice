@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring in Action!</title>
+</head>
+<body>
+<script>
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GPB: amount * 0.53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const hundo = convertCurrency(100);
+  console.log(' hundo ', hundo);
+
+  const { USD, GPB, AUD, MEX } = convertCurrency(100);
+
+  console.log(' USD, GPB, AUD, MEX ', USD, GPB, AUD, MEX);
+
+  // if you only want certain items, only list them and the rest will just drop off
+
+  function tipCalc({total, tip = 0.15, tax = 0.13} = {}) {
+    return total + (tip * total) + (tax * total);
+  }
+
+  const bill = tipCalc ({total: 200, tip: 0.20})
+  console.log(' bill ', bill );
+
+</script>
+</body>
+</html>
