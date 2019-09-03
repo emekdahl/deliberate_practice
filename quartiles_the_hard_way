@@ -1,0 +1,23 @@
+from statistics import median
+n=int(input())
+arr=sorted(map(int,input().split()))
+
+q2 = round(median(arr))
+
+if n % 2 != 0:
+    median_index = arr.index(q2)
+    arr1 = arr[:median_index]
+    arr2 = arr[1 + median_index:]
+    q1 = round(median(arr1))
+    q3 = round(median(arr2))
+
+else: 
+    median_index = round(n/2)
+    arr3 = arr[:median_index]
+    arr4 = arr[median_index:]
+    q1 = round(median(arr3))
+    q3 = round(median(arr4))
+
+print(q1)
+print(q2)
+print(q3)
