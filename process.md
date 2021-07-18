@@ -1,0 +1,5 @@
+- repeat and clarify
+- ask questions
+- establish inputs and outputs
+- pause to reflect
+- 

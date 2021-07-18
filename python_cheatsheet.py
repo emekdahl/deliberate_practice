@@ -8,6 +8,7 @@ def for_loop(nums):
         print(num)
 # for_loop(nums)
 
+
 # enumerate
 colors = ["red", "green", "blue", "purple"]
 ratios = [0.2, 0.3, 0.1, 0.4]
@@ -17,14 +18,13 @@ for i, color in enumerate(colors):
 
 # loop over multiple lists at the same time
 color_list = []
-for color,ratio in zip(colors, ratios):
+for color, ratio in zip(colors, ratios):
     color_list.append((color, ratio))
     # print("{}: {}".format(ratio * 100, color))
     # print(color_list)
 
-if 'red' in color_list[0]: 
+if 'red' in color_list[0]:
     print('woot')
-
 
 
 def range_loop():
@@ -37,6 +37,7 @@ def range_loop():
     # for x in range (3,8,2)
 # range_loop()
 
+
 def while_loop():
     count = 0
 
@@ -44,6 +45,7 @@ def while_loop():
         print(count)
         count += 1
 # while_loop()
+
 
 def break_loop():
     count = 0
@@ -54,17 +56,23 @@ def break_loop():
             break
 # break_loop()
 
+
 def continue_loop():
     for x in range(10):
         if x % 2 == 0:
             continue
         print(x)
-#continue_loop()
+# continue_loop()
+
 
 txns = [1.09, 23.56, 57.84, 4.56, 6.78]
 TAX_RATE = .08
+
+
 def get_price_with_tax(txn):
     return txn * (1 + TAX_RATE)
+
+
 final_prices = map(get_price_with_tax, txns)
 # print(list(final_prices))
 
@@ -109,7 +117,7 @@ stuff2 = stuff.clear()
 # print(stuff2)
 
 # count
-#print(stuff.count(2))
+# print(stuff.count(2))
 
 # length
 print(len(stuff))
@@ -118,11 +126,11 @@ print(len(stuff))
 # print(stuff.extend([4]))
 
 # index
-odds = [1,3,5]
+odds = [1, 3, 5]
 # print(odds.index(3))
 
 # insert (index, elem)
-odds.insert(0,0)
+odds.insert(0, 0)
 # print(odds)
 
 # pop
@@ -134,17 +142,17 @@ list = ['a', 'b', 'c', 'd']
 # print(list[1:-1])
 
 list[0:2] = 'z'
-# print(list) 
+# print(list)
 
 # remove an element
 list.remove('z')
-#print(list)
+# print(list)
 
 # reverse
 list.reverse()
 # print(list)
 
-# sort 
+# sort
 list.sort()
 # print(list)
 
@@ -153,7 +161,7 @@ list.sort()
 #######################
 
 fruits = ("apple", "banana", "cherry")
-# or 
+# or
 
 # note the double round brackets
 fruitz = tuple(("apple", "banana", "cherry"))
@@ -189,3 +197,86 @@ fruits_to_the_max = fruits + more_fruit
 
 # can return multiple indices
 # print(fruits_to_the_max.index('apple'))
+
+#######################
+#      List Nodes     #
+#######################
+
+# The way to get at a list node is like this:
+root = n = ListNode(0)
+
+# get the value
+l.val
+
+# get the next item
+l.next
+
+#######################
+#       BASICS        #
+#######################
+
+# declare a var
+spam = 'hello'
+
+# print out a var
+print(spam)
+
+# get the length of something
+len(something)
+
+# to string
+str(something)
+
+# to int
+int(7.7)
+
+# true
+True
+
+# false
+False
+
+# null
+None
+
+#######################
+#   CONDITIONALS      #
+#######################
+
+if a is False:
+    print('yay')
+else:
+    print('why')
+
+if a == 3:
+    print('yay')
+else:
+    print('why')
+
+#######################
+#       GLOBALS       #
+#######################
+
+
+def spam():
+    global eggs
+    eggs = 'spam'
+
+
+eggs = 'global'
+spam()
+print(eggs)
+spam
+
+#######################
+#    try / except     #
+#######################
+
+
+def spam(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError as e:
+        print('Error: Invalid argument: {}'.format(e))
+    finally:
+        print("-- division finished --")
